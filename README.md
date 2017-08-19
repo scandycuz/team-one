@@ -1,9 +1,7 @@
 # Team One
-
 Millennial Disrupt Hackathon Project
 
 ### Set Up Local Database
-
 - Install Postgres
   - Update apt-get
     - `sudo apt-get update`

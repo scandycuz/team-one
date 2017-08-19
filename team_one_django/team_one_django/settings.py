@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'team_one_django.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'teamone',
+        'NAME': 'teamonedb',
         'USER': 'teamone',
         'PASSWORD': 'disrupt',
         'HOST': 'localhost',

@@ -18,10 +18,14 @@ Millennial Disrupt Hackathon Project
     - `ALTER ROLE teamone SET default_transaction_isolation TO 'read committed';`
     - `ALTER ROLE teamone SET timezone TO 'UTC';`
   - Grant all priviledges to user
-    - `GRANT ALL PRIVILEGES ON DATABASE teamone TO teamonedb;`
+    - `GRANT ALL PRIVILEGES ON DATABASE teamonedb TO teamone;`
   - Exit
     - `\q`
     - `exit`
+
+  - Migrate Django Auth Models
+    - `python manage.py makemigrations`
+    - `python manage.py migrate`
 
 ### Create Django Admin User
 - `python manage.py createsuperuser`

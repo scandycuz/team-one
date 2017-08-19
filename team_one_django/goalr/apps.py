@@ -5,4 +5,4 @@ from django.apps import AppConfig
 
 
 class ProjectConfig(AppConfig):
-    name = 'team_one_django'
+    name = 'goalr'

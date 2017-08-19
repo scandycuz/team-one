@@ -35,8 +35,6 @@ INSTALLED_APPS = [
     'tasks',
     'projects',
     'rest_framework',
-    'webpack_loader',
-    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

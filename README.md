@@ -23,5 +23,5 @@ Millennial Disrupt Hackathon Project
     - `\q`
     - `exit`
 
-- Create Django Admin User
-  - `python manage.py createsuperuser`
+### Create Django Admin User
+- `python manage.py createsuperuser`

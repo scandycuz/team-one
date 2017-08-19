@@ -31,15 +31,12 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-<<<<<<< HEAD:team_one_django/goalr/settings.py
     'goalr',
+    'tasks',
+    'projects',
     'rest_framework',
     'webpack_loader',
-=======
-    'tasks.apps.TasksConfig',
-    'projects.apps.ProjectsConfig',
     'rest_framework',
->>>>>>> 64219068a83b51a97d58b4f8efb01d349a641c81:team_one_django/team_one_django/settings.py
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

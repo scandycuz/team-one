@@ -60,7 +60,7 @@ const Dashboard = (props) => {
             </TableBody>
           </Table>
         </Tab>
-        <Tab label="Goals" >
+        <Tab label="Rewards" >
           <Table>
             <TableHeader displaySelectAll={false}>
               <TableRow>

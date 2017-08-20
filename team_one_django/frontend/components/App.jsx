@@ -6,7 +6,12 @@ import SideBar from './SideBar/SideBar';
 const App = () => {
   return(
     <div className="app">
-      <SideBar />
+      <div className="sidebar-container">
+        <SideBar />
+      </div>
+      <div className="dashboard-container">
+        Dashboard
+      </div>
     </div>
   );
 }

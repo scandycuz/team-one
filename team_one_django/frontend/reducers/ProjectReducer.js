@@ -1,6 +1,7 @@
 const nullState = {
   project: {
     points: 25,
+    maxPoints: 100,
   }
 }
 

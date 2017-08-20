@@ -4,28 +4,25 @@ import { Provider } from 'react-redux';
 import { Route, HashRouter } from 'react-router-dom';
 
 import configureStore from './store/Store';
+import App from './components/App';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import '../assets/scss/App.scss';
 
 document.addEventListener('DOMContentLoaded', () => {
+  injectTapEventPlugin();
   let store;
-
-  class TempApp extends React.Component {
-    render() {
-      return (
-        <div>Hello World!</div>
-      );
-    }
-  }
-
   store = configureStore();
   const container = document.getElementById('container');
   ReactDOM.render(
-    <Provider store={store}>
-      <HashRouter>
-        <Route path="/" component={TempApp} />
-      </HashRouter>
-    </Provider>,
+    <MuiThemeProvider>
+      <Provider store={store}>
+        <HashRouter>
+          <Route path="/" component={App} />
+        </HashRouter>
+      </Provider>
+    </MuiThemeProvider>,
     container
   );
 });

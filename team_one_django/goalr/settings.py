@@ -34,6 +34,8 @@ INSTALLED_APPS = [
     'goalr',
     'tasks',
     'projects',
+    'goals',
+    'rewards',
     'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',

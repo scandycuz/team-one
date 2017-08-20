@@ -1,16 +1,19 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.shortcuts import render
-from django.http import HttpResponse
-# Create your views here.
+from rest_framework import generics
+from rest_framework.permissions import IsAuthenticated
 
-def index(request):
-    return HttpResponse('Rendering projects index')
+from projects.models import Project
+from projects.serializers import ProjectSerializer
 
-def show(request):
-    return HttpResponse('Rendering projects show')
+class ProjectCreate(generics.CreateAPIView):
+    queryset = Project.objects.all()
+    serializer_class = ProjectSerializer
+    permission_classes = (IsAuthenticated,)
 
-def create(request):
-    return HttpResponse('Create project')
-
+class ProjectRetreiveUpdate(generics.RetrieveUpdateAPIView):
+    queryset = Project.objects.all()
+    serializer_class = ProjectSerializer
+    permission_classes = (IsAuthenticated,)
+    lookup_url_kwarg = 'project_id'

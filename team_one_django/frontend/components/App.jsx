@@ -1,9 +1,12 @@
 import React from 'react';
 
+import RaisedButton from 'material-ui/RaisedButton';
+import SideBar from './SideBar/SideBar';
+
 const App = () => {
   return(
-    <div>
-    sup g
+    <div className="app">
+      <SideBar />
     </div>
   );
 }

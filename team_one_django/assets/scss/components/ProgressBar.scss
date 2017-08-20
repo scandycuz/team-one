@@ -1,0 +1,13 @@
+
+.progress-bar-container {
+  padding: 40px;
+  border: 1px solid gray;
+  .progress-bar{
+    height: 40px;
+    background: #FD8900;
+    animation-name: growth;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+}
+

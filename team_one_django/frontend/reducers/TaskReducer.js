@@ -1,5 +1,5 @@
 import merge from 'lodash/merge';
-import { RECIEVE_UPDATE_ACTION } from '../actions/taskActions';
+import { RECIEVE_UPDATE_ACTION, ADD_TASK } from '../actions/taskActions';
 
 const nullState = {
   tasks: [
@@ -69,6 +69,13 @@ const TaskReducer = (state = nullState, action) => {
     case RECIEVE_UPDATE_ACTION:
       const tasks =  updateTasks(id, taskStatus);
       return merge({}, tasks, state);
+    case ADD_TASK:
+      const updatedTasks = JSON.parse(JSON.stringify(state.tasks));
+      updatedTasks.push(action.task);
+      const newState = {
+        tasks: updatedTasks
+      }
+      return newState;
     default:
       return state;
   }

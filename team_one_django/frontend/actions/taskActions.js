@@ -1,4 +1,5 @@
 export const RECIEVE_UPDATE_ACTION = 'RECIEVE_UPDATE_ACTION';
+export const ADD_TASK = 'ADD_TASK';
 
 export const recieveUpdateTask = (id, taskStatus, points) => {
   return ({
@@ -7,4 +8,11 @@ export const recieveUpdateTask = (id, taskStatus, points) => {
     taskStatus,
     points,
   });
+}
+
+export const addTask = (task) => {
+  return({
+    type: ADD_TASK,
+    task,
+  })
 }

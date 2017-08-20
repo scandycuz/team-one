@@ -31,8 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'tasks.apps.TasksConfig',
-    'projects.apps.ProjectsConfig',
+    'goalr',
+    'tasks',
+    'projects',
     'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -66,7 +67,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'team_one_django.urls'
+ROOT_URLCONF = 'goalr.urls'
 
 TEMPLATES = [
     {
@@ -84,7 +85,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'team_one_django.wsgi.application'
+WSGI_APPLICATION = 'goalr.wsgi.application'
 
 
 # Database

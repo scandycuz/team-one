@@ -3,6 +3,7 @@ import React from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 import SideBar from './SideBar/SideBar';
 import Header from './Header/Header';
+import ProgressBar from './ProgressBar/ProgressBar';
 
 const App = () => {
   return(
@@ -14,6 +15,7 @@ const App = () => {
       <div className="dashboard-container">
         <Header />
         Dashboard
+        <ProgressBar />
       </div>
     </div>
   );

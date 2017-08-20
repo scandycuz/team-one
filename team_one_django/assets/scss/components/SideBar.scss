@@ -1,3 +1,33 @@
 .sidebar {
+  padding: 24px;
   background: #1A202A;
+  color: white;
+  height: 100%;
+
+  i {
+    margin-right: 10px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .users-container {
+    margin-top: 40px;
+
+    .users-title {
+      margin-bottom: 16px;
+      font-size: 18px;
+    }
+
+    .student {
+      margin: 20px 10px;
+      font-size: 16px;
+    }
+
+    .name {
+      margin-bottom: 5px;
+    }
+
+  }
 }

@@ -46,8 +46,8 @@ const Dashboard = (props) => {
 
   return(
     <div className="dashboard">
-      <Tabs>
-        <Tab label="Tasks" >
+      <Tabs className="dashboard-tabs">
+        <Tab label="Tasks">
           <Table multiSelectable onCellClick={handleTaskClick}>
             <TableHeader displaySelectAll={false}>
               <TableRow>

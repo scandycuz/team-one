@@ -8,7 +8,8 @@ const Header = (props) => {
         <h1 className='header-title'>{props.project.title}</h1>
         <Chip className='total-points'>
           <Avatar
-            size={60}
+            backgroundColor='#1A202A'
+            color='#ffffff'
           >{props.project.points}</Avatar>
           Points
         </Chip>

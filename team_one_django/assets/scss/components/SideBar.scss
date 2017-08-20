@@ -9,11 +9,12 @@
   }
 
   .title {
+    margin-top: 10px;
     font-size: 28px;
   }
 
   .users-container {
-    margin-top: 40px;
+    margin-top: 62px;
 
     .users-title {
       margin-bottom: 16px;
@@ -21,12 +22,16 @@
     }
 
     .student {
-      margin: 20px 10px;
+      margin: 20px 0px;
       font-size: 16px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
     }
 
     .name {
       margin-bottom: 5px;
+      margin-left: 1rem;
     }
 
   }

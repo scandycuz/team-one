@@ -53,7 +53,7 @@ module.exports = {
       },
     ],
   },
-
+  devtool: 'source-maps',
   resolve: {
     //extensions that should be used to resolve modules
     extensions: ['.js', '.jsx']

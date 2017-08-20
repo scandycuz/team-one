@@ -4,6 +4,7 @@ import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import SideBar from './SideBar/SideBar';
+import ProgressBar from './ProgressBar/ProgressBar';
 import DashboardContainer from './Dashboard/DashboardContainer';
 
 class App extends React.Component {
@@ -25,12 +26,13 @@ class App extends React.Component {
     nextProps.rewards.forEach((reward) => {
       if (this.props.project.points < reward.requiredPoints &&
       nextProps.project.points >= reward.requiredPoints) {
-        this.message = `Unlocked '${reward.title}'`;
+        this.message = <h4>Unlocked {reward.title}!</h4>;
+        this.description = <p>{reward.description}</p>;
         setTimeout(() => {
           this.setState({
             open: true,
           })
-        }, 400);
+        }, 200);
       }
     });
   }
@@ -54,11 +56,13 @@ class App extends React.Component {
           onRequestClose={this.handleClose}
         >
           {this.message}
+          {this.description}
         </Dialog>
         <div className="sidebar-container">
           <SideBar />
         </div>
         <div className="dashboard-container">
+          <ProgressBar />
           <DashboardContainer />
         </div>
       </div>

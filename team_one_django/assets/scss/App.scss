@@ -2,16 +2,16 @@
 @import "components/ProgressBar.scss";
 @import "components/SideBar.scss";
 
-body {
+#container, html, body {
   margin: 0;
+  height: 100%;
 }
 
 .app {
     display: flex;
-    height: 100vh;
+    height: 100%;
     .sidebar-container {
       width: 26%;
-
       .sidebar {
         height: 100%;
       }

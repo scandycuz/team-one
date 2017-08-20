@@ -3,7 +3,7 @@ const nullState = {
     {
       id: 1,
       title: 'Unreal Tournament',
-      description: '1 hour Unreal Tournament break',
+      description: 'Everyone take a 1 hour break to play Unreal Tournament',
       requiredPoints: 25,
     },
     {

@@ -43,8 +43,13 @@ module.exports = {
           //specify that we will be dealing with React code
           presets: ['react']
         }
-      }
-    ]
+      },
+      {
+        test: /\.scss$/,
+        include: path.resolve('./assets/scss/'),
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+    ],
   },
 
   resolve: {

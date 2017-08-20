@@ -5,6 +5,8 @@ import { Route, HashRouter } from 'react-router-dom';
 
 import configureStore from './store/Store';
 
+import '../assets/scss/App.scss';
+
 document.addEventListener('DOMContentLoaded', () => {
   let store;
 

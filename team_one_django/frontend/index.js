@@ -8,6 +8,8 @@ import App from './components/App';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
+import '../assets/scss/App.scss';
+
 document.addEventListener('DOMContentLoaded', () => {
   injectTapEventPlugin();
   let store;

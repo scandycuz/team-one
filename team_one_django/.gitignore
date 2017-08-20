@@ -1,4 +1,4 @@
-*.pyc 
+*.pyc
 node_modules/
 bundles/
 webpack-stats.json

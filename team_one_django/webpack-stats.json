@@ -1,1 +1,1 @@
-{"status":"done","chunks":{"main":[{"name":"main-fe4539aa78f4bb178fa8.js","path":"/Users/joshualing/Desktop/team-one/team_one_django/assets/bundles/main-fe4539aa78f4bb178fa8.js"}]}}
+{"status":"error","chunks":{"main":[{"name":"main-fe4539aa78f4bb178fa8.js","path":"/Users/joshualing/Desktop/team-one/team_one_django/assets/bundles/main-fe4539aa78f4bb178fa8.js"}]},"error":"ModuleNotFoundError","message":"Module not found: Error: Can't resolve 'react-router-dom' in '/Users/joshualing/Desktop/team-one/team_one_django/frontend'"}

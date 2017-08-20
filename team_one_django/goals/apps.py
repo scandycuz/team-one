@@ -4,5 +4,5 @@ from __future__ import unicode_literals
 from django.apps import AppConfig
 
 
-class ProjectConfig(AppConfig):
-    name = 'team_one_django'
+class GoalsConfig(AppConfig):
+    name = 'goals'

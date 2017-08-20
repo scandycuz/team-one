@@ -31,9 +31,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'tasks.apps.TasksConfig',
-    'projects.apps.ProjectsConfig',
+    'goalr',
+    'tasks',
+    'projects',
+    'rest_auth',
+    'goals',
+    'rewards',
     'rest_framework',
+    'rest_framework.authtoken',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -66,7 +71,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'team_one_django.urls'
+ROOT_URLCONF = 'goalr.urls'
 
 TEMPLATES = [
     {
@@ -84,7 +89,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'team_one_django.wsgi.application'
+WSGI_APPLICATION = 'goalr.wsgi.application'
 
 
 # Database
@@ -120,6 +125,14 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    )
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/

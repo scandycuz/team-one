@@ -4,7 +4,8 @@ import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import SideBar from './SideBar/SideBar';
-import ProgressBar from './ProgressBar/ProgressBar';
+import HeaderContainer from './Header/HeaderContainer';
+import ProgressBarContainer from './ProgressBar/ProgressBarContainer';
 import DashboardContainer from './Dashboard/DashboardContainer';
 
 class App extends React.Component {
@@ -26,7 +27,7 @@ class App extends React.Component {
     nextProps.rewards.forEach((reward) => {
       if (this.props.project.points < reward.requiredPoints &&
       nextProps.project.points >= reward.requiredPoints) {
-        this.message = <h4>Unlocked {reward.title}!</h4>;
+        this.message = <h2>Unlocked {reward.title}!</h2>;
         this.description = <p>{reward.description}</p>;
         setTimeout(() => {
           this.setState({
@@ -62,7 +63,8 @@ class App extends React.Component {
           <SideBar />
         </div>
         <div className="dashboard-container">
-          <ProgressBar />
+          <HeaderContainer />
+          <ProgressBarContainer />
           <DashboardContainer />
         </div>
       </div>

@@ -2,7 +2,7 @@ import merge from 'lodash/merge';
 import { RECIEVE_UPDATE_ACTION } from '../actions/taskActions';
 
 const nullState = {
-  title: 'Company Product',
+  title: 'Launch Company Product',
   points: 10,
 }
 

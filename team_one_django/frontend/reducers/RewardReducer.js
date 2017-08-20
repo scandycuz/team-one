@@ -3,26 +3,26 @@ const nullState = {
     {
       id: 1,
       title: 'Unreal Tournament',
-      description: 'Everyone take a 1 hour break to play Unreal Tournament',
-      requiredPoints: 25,
+      description: 'Everyone take a 1 hour break to play Unreal Tournament over the local network',
+      requiredPoints: 50,
     },
     {
       id: 2,
       title: 'Taco Day',
       description: 'Order tacos to the office',
-      requiredPoints: 50,
+      requiredPoints: 100,
     },
     {
       id: 3,
       title: 'Movie Night',
       description: 'The team goes to a movie over the weekend',
-      requiredPoints: 75,
+      requiredPoints: 150,
     },
     {
       id: 4,
       title: 'Team dinner at Kokkari',
       description: 'Team dinner at Kokkari in SF',
-      requiredPoints: 100,
+      requiredPoints: 200,
     },
   ],
 }

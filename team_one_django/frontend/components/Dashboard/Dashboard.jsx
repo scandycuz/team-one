@@ -1,5 +1,6 @@
 import React from 'react';
 import {Tabs, Tab} from 'material-ui/Tabs';
+import FlatButton from 'material-ui/FlatButton';
 import {
   Table,
   TableBody,
@@ -59,6 +60,11 @@ const Dashboard = (props) => {
               {taskRows}
             </TableBody>
           </Table>
+          <FlatButton
+            className="add-button"
+            label="+ Add Task"
+            secondary={true}
+          />
         </Tab>
         <Tab label="Rewards" >
           <Table multiSelectable>
@@ -73,6 +79,11 @@ const Dashboard = (props) => {
               {rewardRows}
             </TableBody>
           </Table>
+          <FlatButton
+            className="add-button"
+            label="+ Add Reward"
+            secondary={true}
+          />
         </Tab>
       </Tabs>
     </div>

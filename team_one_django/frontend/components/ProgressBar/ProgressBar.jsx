@@ -1,45 +1,33 @@
 import React from 'react';
 
-let myReuseableStylesheet = document.createElement('style');
-document.head.appendChild(myReuseableStylesheet);
-let styleSheet = myReuseableStylesheet.sheet;
-let addKeyFrames = (name, frames) => {
-  var str = name + "{" + frames + "}",
-  pos = styleSheet.length;
-  styleSheet.insertRule("@-webkit-keyframes " + str, pos);
-  styleSheet.insertRule("@keyframes " + str, pos + 1);
-};
+const ProgressBar = (props) => {
+  const getNextReward = () => {
+    let nextReward = null;
+    for(let i = 0; i < props.rewards.length; i++ ){
+      const reward = props.rewards[i];
+      if (reward.requiredPoints > props.project.points) {
+        return reward;
+      }
+    }
+  }
+  const nextReward = getNextReward();
 
-
-export default class Progress extends React.Component {
-  constructor(props) {
-    super(props);
+  const widthDecimal = (props.project.points % 50) / 50;
+  const width = widthDecimal * 100;
+  const style = {
+    width: `${width}%`,
   }
 
-  componentDidMount() {
-    addKeyFrames(
-      'growth',
-      'from {width: 2%;}' +
-      'to {width: 50%;}'
-    );
-  }
-
-  update() {
-    this.setState({ width: '75%', animation: 'none' });
-  }
-
-  update2() {
-    this.setState({ width: '100%', animation: 'none' });
-  }
-
-
-  render() {
-    return (
-      <div className="progress-bar-container">
-        <div style={this.state} className="progress-bar" />
-        <button onClick={this.update.bind(this)}>update</button>
-        <button onClick={this.update2.bind(this)}>update2</button>
+  return (
+    <div className="progress-bar-container">
+      <div className="progress-bar-box">
+        <div style={style} className="progress-bar" />
+        <div className="progress-bar-labels">
+          <span>Progress to goal: <strong>{nextReward.title}</strong></span>
+        </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
+
+export default ProgressBar;

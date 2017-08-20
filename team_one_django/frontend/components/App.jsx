@@ -1,20 +1,69 @@
 import React from 'react';
 
+import Dialog from 'material-ui/Dialog';
+import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import SideBar from './SideBar/SideBar';
 import DashboardContainer from './Dashboard/DashboardContainer';
 
-const App = () => {
-  return(
-    <div className="app">
-      <div className="sidebar-container">
-        <SideBar />
+class App extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      open: false,
+    }
+
+    this.handleClose = this.handleClose.bind(this);
+  }
+
+  handleClose() {
+    this.setState({open: false});
+  };
+
+  componentWillReceiveProps(nextProps) {
+    nextProps.rewards.forEach((reward) => {
+      if (this.props.project.points < reward.requiredPoints &&
+      nextProps.project.points >= reward.requiredPoints) {
+        this.message = `Unlocked '${reward.title}'`;
+        setTimeout(() => {
+          this.setState({
+            open: true,
+          })
+        }, 400);
+      }
+    });
+  }
+
+  render() {
+    const actions = [
+      <FlatButton
+        label="Woohoo!"
+        primary={true}
+        onClick={this.handleClose}
+      />,
+    ];
+
+    return(
+      <div className="app">
+        <Dialog
+          title="Nice!"
+          actions={actions}
+          modal={false}
+          open={this.state.open}
+          onRequestClose={this.handleClose}
+        >
+          {this.message}
+        </Dialog>
+        <div className="sidebar-container">
+          <SideBar />
+        </div>
+        <div className="dashboard-container">
+          <DashboardContainer />
+        </div>
       </div>
-      <div className="dashboard-container">
-        <DashboardContainer />
-      </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;

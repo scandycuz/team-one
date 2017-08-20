@@ -21,7 +21,7 @@ const Dashboard = (props) => {
   });
 
   const rewardRows = props.rewards.map((reward) => {
-    if (props.project.points > reward.requiredPoints) {
+    if (props.project.points >= reward.requiredPoints) {
       return null;
     }
     return (
@@ -37,9 +37,9 @@ const Dashboard = (props) => {
     if (e.target.type === 'checkbox') {
       const selectedTask = props.tasks[rowIdx];
       const taskId = selectedTask.id;
-      const taskIsComplete = selectedTask.completed
-      console.log(taskId, taskIsComplete);
-      // TODO: dispatch action to update task completed status
+      const taskComplete = selectedTask.completed
+      const points = selectedTask.points;
+      props.recieveUpdateTask(taskId, !taskComplete, points);
     }
   }
 
@@ -47,7 +47,7 @@ const Dashboard = (props) => {
     <div className="dashboard">
       <Tabs>
         <Tab label="Tasks" >
-          <Table onCellClick={handleTaskClick}>
+          <Table multiSelectable onCellClick={handleTaskClick}>
             <TableHeader displaySelectAll={false}>
               <TableRow>
                 <TableHeaderColumn>Title</TableHeaderColumn>
@@ -61,7 +61,7 @@ const Dashboard = (props) => {
           </Table>
         </Tab>
         <Tab label="Rewards" >
-          <Table>
+          <Table multiSelectable>
             <TableHeader displaySelectAll={false}>
               <TableRow>
                 <TableHeaderColumn>Title</TableHeaderColumn>

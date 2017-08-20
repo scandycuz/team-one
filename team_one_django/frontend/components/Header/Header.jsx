@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
+import Chip from 'material-ui/Chip';
+import Avatar from 'material-ui/Avatar';
 
-class Header extends Component {
-    render() {
-        var projectTitle = 'Team One';
-        var pointsTotal = 25;
-        return(
-            <div className="header">
-                <h1>{projectTitle}</h1>
-                <p>Total Points: {pointsTotal}</p>
-            </div>
-        );
-    }
+const Header = (props) => {
+    return(
+      <div className="header">
+        <h1 className='header-title'>{props.project.title}</h1>
+        <Chip className='total-points'>
+          <Avatar
+            size={60}
+          >{props.project.points}</Avatar>
+          Points
+        </Chip>
+      </div>
+    );
 }
 
 export default Header;

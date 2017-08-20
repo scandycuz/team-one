@@ -1,7 +1,13 @@
 .header {
-    background-color: black;
-    position: absolute;
-    top: 0;
     width: 100%;
-    color: white;
+    position: relative;
+    text-align: center;
+}
+.header-title {
+  color: #333;
+}
+.total-points {
+  right: 1rem !important;
+  top: 0rem !important;
+  position: absolute !important;
 }

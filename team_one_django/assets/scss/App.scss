@@ -2,6 +2,7 @@
 @import "components/ProgressBar.scss";
 @import "components/SideBar.scss";
 @import "components/Header.scss";
+@import "components/Dashboard.scss";
 
 #container, html, body {
   margin: 0;
@@ -12,15 +13,14 @@
     display: flex;
     height: 100%;
     .sidebar-container {
-      width: 25%;
-
+      width: 26%;
       .sidebar {
         height: 100%;
       }
     }
 
     .dashboard-container {
-      width: 75%;
+      width: 74%;
     }
 
 }

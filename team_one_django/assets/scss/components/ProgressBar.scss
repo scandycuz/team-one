@@ -1,9 +1,16 @@
-
 .progress-bar-container {
   padding: 40px;
   border: 1px solid gray;
-  .progress-bar{
+  border-left: none;
+  border-top: none;
+  .progress-bar-box {
     height: 40px;
+    background: #ffebee;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .progress-bar{
+    height: 100%;
     background: #FD8900;
     animation-name: growth;
     animation-duration: 2s;
@@ -11,3 +18,10 @@
   }
 }
 
+.progress-bar-labels {
+  color: #555;
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}

@@ -5,7 +5,7 @@ var BundleTracker = require('webpack-bundle-tracker')
 module.exports = {
   //the base directory (absolute path) for resolving the entry option
   context: __dirname,
-  //the entry point we created earlier. Note that './' means 
+  //the entry point we created earlier. Note that './' means
   //your current directory. You don't have to specify the extension  now,
   //because you will specify extensions later in the `resolve` section
   entry: './frontend/index.js',
@@ -30,14 +30,14 @@ module.exports = {
 
   module: {
     loaders: [
-      //a regexp that tells webpack use the following loaders on all 
+      //a regexp that tells webpack use the following loaders on all
       //.js and .jsx files
       {
         test: /\.jsx?$/,
-        //we definitely don't want babel to transpile all the files in 
+        //we definitely don't want babel to transpile all the files in
         //node_modules. That would take a long time.
         exclude: /node_modules/,
-        //use the babel loader 
+        //use the babel loader
         loader: 'babel-loader',
         query: {
           //specify that we will be dealing with React code
@@ -48,9 +48,7 @@ module.exports = {
   },
 
   resolve: {
-    //tells webpack where to look for modules
-    modulesDirectories: ['node_modules'],
     //extensions that should be used to resolve modules
-    extensions: ['', '.js', '.jsx']
+    extensions: ['.js', '.jsx']
   }
 }

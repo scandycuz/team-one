@@ -1,5 +1,8 @@
+const nullState = {
+  token: '',
+}
 
-const SessionReducer = (state = { user: 'hi' }, action) => {
+const SessionReducer = (state = nullState, action) => {
   switch (action.type) {
     default:
       return state;

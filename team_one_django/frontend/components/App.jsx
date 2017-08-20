@@ -2,6 +2,7 @@ import React from 'react';
 
 import RaisedButton from 'material-ui/RaisedButton';
 import SideBar from './SideBar/SideBar';
+import DashboardContainer from './Dashboard/DashboardContainer';
 
 const App = () => {
   return(
@@ -10,7 +11,7 @@ const App = () => {
         <SideBar />
       </div>
       <div className="dashboard-container">
-        Dashboard
+        <DashboardContainer />
       </div>
     </div>
   );

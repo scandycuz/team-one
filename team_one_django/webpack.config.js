@@ -17,6 +17,8 @@ module.exports = {
     filename: '[name]-[hash].js',
   },
 
+  devtool: 'source-map',
+
   plugins: [
     //tells webpack where to store data about your bundles.
     new BundleTracker({ filename: './webpack-stats.json' }),
